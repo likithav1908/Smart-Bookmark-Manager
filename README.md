@@ -4,18 +4,18 @@ A modern bookmark manager with Google OAuth authentication and real-time updates
 
 ## Features
 
-- **Google OAuth Authentication**: Sign in using your Google account (no email/password)
-- **Private Bookmarks**: Each user can only see their own bookmarks
-- **Real-time Updates**: Bookmarks update in real-time across multiple browser tabs
-- **CRUD Operations**: Add and delete bookmarks
-- **Modern UI**: Clean, responsive design with Tailwind CSS
-- **TypeScript**: Full TypeScript support for better development experience
+- Google OAuth Authentication: Sign in using your Google account (no email/password)
+- Private Bookmarks: Each user can only see their own bookmarks
+- Real-time Updates: Bookmarks update in real-time across multiple browser tabs
+- CRUD Operations: Add and delete bookmarks
+- Modern UI: Clean, responsive design with Tailwind CSS
+- TypeScript: Full TypeScript support for better development experience
 
 ## Technology Stack
 
-- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
-- **Backend**: Supabase (Auth, Database, Realtime)
-- **Database**: PostgreSQL (via Supabase)
+- Frontend: Next.js 14, React, TypeScript, Tailwind CSS
+- Backend: Supabase (Auth, Database, Realtime)
+- Database: PostgreSQL (via Supabase)
 
 ## Setup Instructions
 
@@ -73,22 +73,22 @@ Open your browser and navigate to `http://localhost:3000`.
 
 ## Usage
 
-1. **Sign In**: Click "Sign in with Google" to authenticate
-2. **Add Bookmark**: Enter a title and URL, then click "Add Bookmark"
-3. **View Bookmarks**: Your bookmarks will appear in the list below
-4. **Delete Bookmark**: Click the trash icon next to any bookmark to delete it
-5. **Real-time Updates**: Open multiple tabs to see real-time synchronization
+1. Sign In: Click "Sign in with Google" to authenticate
+2. Add Bookmark: Enter a title and URL, then click "Add Bookmark"
+3. View Bookmarks: Your bookmarks will appear in the list below
+4. Delete Bookmark: Click the trash icon next to any bookmark to delete it
+5. Real-time Updates: Open multiple tabs to see real-time synchronization
 
 ## Security Features
 
-- **Row Level Security (RLS)**: Ensures users can only access their own bookmarks
-- **OAuth Authentication**: Secure Google OAuth integration
-- **TypeScript**: Type safety for better code quality
-- **Environment Variables**: Secure credential management
+- Row Level Security (RLS): Ensures users can only access their own bookmarks
+- OAuth Authentication: Secure Google OAuth integration
+- TypeScript: Type safety for better code quality
+- Environment Variables: Secure credential management
 
 ## Project Structure
 
-```
+
 src/
 ├── app/
 │   ├── auth/callback/     # OAuth callback handler
@@ -105,8 +105,29 @@ src/
 │   └── bookmarks.ts       # Bookmark CRUD operations
 └── types/
     └── bookmark.ts        # TypeScript type definitions
-```
 
-## License
 
-MIT License
+
+
+
+
+## Challenges Faced
+- Google OAuth Configuration:
+  - Setting up the Google Cloud Console project with proper OAuth consent screen configuration
+  - Managing OAuth client ID and secret securely in environment variables
+
+- Supabase URL Configuration:
+  - Configuring correct callback URLs in both Supabase and Google Cloud Console
+  - Handling different environments (development, staging, production) with appropriate URL configurations
+
+- Private Bookmark Access:
+  - Implementing Row Level Security (RLS) policies in Supabase to ensure users only see their own bookmarks
+
+- Authentication Flow:
+  - Managing the OAuth redirect flow between the application and Google
+
+- Environment Configuration:
+  - Managing different environment variables for development and production
+  - Setting up proper .env files with sensitive data
+
+
